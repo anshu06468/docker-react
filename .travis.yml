@@ -1,19 +1,12 @@
 sudo: required
 language: generic
 services:
-  - docker
-
-before-install: 
-  - docker build -t reactapp -f Dockerfile.dev .
-
+- docker
+before-install:
+- docker build -t reactapp -f Dockerfile.dev .
 script:
-  - docker run -e CI=true reactapp npm run test
-# deploy:
-#   provider: gae
-#   project: verdant-medley-276408
-#   keyfile: verdant-medley-276408-5a76c40aadc3.json
-#   verbosity: debug
-#   skip_cleanup: true
-#   default: true
-#   on:
-#     branch: master
+- docker run -e CI=true reactapp npm run test
+before_install:
+- openssl aes-256-cbc -K $encrypted_7fa3d4124f1f_key -iv $encrypted_7fa3d4124f1f_iv
+  -in verdant-medley-276408-5a76c40aadc3.json.enc -out verdant-medley-276408-5a76c40aadc3.json
+  -d
