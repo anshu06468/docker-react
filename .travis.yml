@@ -1,0 +1,17 @@
+sudo: required
+language: generic
+services:
+- docker
+deploy:
+  provider: gae
+  project: verdant-medley-276408
+  keyfile: verdant-medley-276408-5a76c40aadc3.json
+  verbosity: debug
+  skip_cleanup: true
+  default: true
+  on:
+    branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_7fa3d4124f1f_key -iv $encrypted_7fa3d4124f1f_iv
+  -in verdant-medley-276408-5a76c40aadc3.json.enc -out verdant-medley-276408-5a76c40aadc3.json
+  -d
