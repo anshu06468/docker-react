@@ -5,7 +5,8 @@
 /.pnp
 .pnp.js
 /verdant-medley-276408-4833bc1d928a.json
-/api_key.py
+*.pyc
+*.pyo
 /credentials.tar.gz
 
 # testing
