@@ -4,7 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-/verdant-medley-276408-5a76c40aadc3.json
+/verdant-medley-276408-4833bc1d928a.json
+/api-key.py
+/credentials.tar.gz
 
 # testing
 /coverage
